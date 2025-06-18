@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(220, 212, 212);
+}
+.window{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    background-color: rgba(0, 255, 255, 0);
+    height: 900px;
+
+    background-image: url("assests/1.png");
+
+    background-position: center;
+    background-size: cover;
+    width: 1400px;
+}
+.player{
+    z-index: 1;
+    top: 500px;
+    left: 500px;
+    transform: scale(0.5);
+    position: absolute;
+    background-image: url("assests/character/leftwalking.gif");
+    height: 120px;
+    width: 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.house{
+    background-image: url("assests/block.png");
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    transform: scale(1.5);
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left:650px;
+}
+.house.hitbox{
+    top: 70px;
+    left: 660px;
+    background-image: none;
+    height: 40px;
+    width: 90px;
+    transform: skew(65deg,-25deg);
+}
