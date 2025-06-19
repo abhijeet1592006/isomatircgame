@@ -1,4 +1,4 @@
-worldObjects=["house","house-2","house-3"]
+worldObjects=["house","house-2","house-3","house-4","house-5","tree"]
 player=document.getElementById("player");
 speed=2
 x=500
@@ -42,7 +42,7 @@ function z(objectId){
        
 
     }else{
-        ob.style.zIndex = 2; 
+        ob.style.zIndex = 1; 
        
     }
 
@@ -64,6 +64,7 @@ function collision(id1){
         obj1.top<obj2.top&&
         obj1.bottom>obj2.bottom
     ){
+        console.log("collide")
         return true
     }
 
