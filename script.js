@@ -1,7 +1,7 @@
 player=document.getElementById("player");
-speed=2.5
+speed=2
 x=500
-y=500
+y=100
 
 keys={
     "ArrowUp":false,
@@ -34,16 +34,16 @@ function collision(id1){
     block1=document.getElementById(id1)
     block2=document.getElementById("player")
 
-    const rect1 = block1.getBoundingClientRect();
+    const obj1 = block1.getBoundingClientRect();
 
-    const rect2 = block2.getBoundingClientRect();
+    const obj2 = block2.getBoundingClientRect();
 
 
 
-    if (rect1.left<rect2.right&&
-        rect1.right>rect2.left&&
-        rect1.top<rect2.bottom+60&&
-        rect1.bottom>rect2.top+60
+    if(obj1.right>obj2.left+20&&
+        obj1.left<obj2.right-20&&
+        obj1.top<obj2.top&&
+        obj1.bottom>obj2.bottom
     ){
         return true
     }
