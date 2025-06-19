@@ -30,7 +30,6 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 5px dotted red;
 }
 .house{
     background-image: url("assests/block.png");
@@ -43,6 +42,5 @@ body{
     position: absolute;
     top: 0px;
     left:650px;
-    border: 5px dotted red;
 
 }
