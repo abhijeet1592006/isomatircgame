@@ -1,3 +1,10 @@
+hi=()=>{startWindow=document.getElementById("start").style.display="none"}
+
+
+
+
+
+
 worldObjects=["house","house-2","house-3","house-4","house-5","tree","tree-2"]
 player=document.getElementById("player");
 speed=2
@@ -114,3 +121,4 @@ function update(){
 
 }
 update()
+
