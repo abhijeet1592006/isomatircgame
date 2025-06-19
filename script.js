@@ -1,3 +1,4 @@
+worldObjects=["house","house-2"]
 player=document.getElementById("player");
 speed=2
 x=500
@@ -23,11 +24,31 @@ addEventListener("keydown",function(e){
 addEventListener("keyup",function(e){
     if(e.key in keys){
         keys[e.key]=false;
-        player.style.backgroundImage="url('assests/character/downwalk.gif')";
+        player.style.backgroundImage="url('assests/character/idle.png')";
+
 
     }
 })
 
+function z(objectId){
+    pla=document.getElementById("player").getBoundingClientRect()
+    player=document.getElementById("player")
+    obj=document.getElementById(objectId).getBoundingClientRect()
+    ob=document.getElementById(objectId)
+
+    if(pla.bottom+90>obj.bottom){
+        // console.log(obj.bottom,"player:-",pla.bottom)
+     
+        ob.style.zIndex = 2; 
+        player.style.zIndex = 3
+       
+
+    }else{
+        ob.style.zIndex = 3; 
+        player.style.zIndex = 2;
+    }
+
+}
 
 function collision(id1){
 
@@ -49,9 +70,6 @@ function collision(id1){
     }
 
 }
-
-
-
 
 function update(){
     prevx=x
@@ -79,16 +97,21 @@ function update(){
 
     player.style.left=x+"px";
     player.style.top=y+"px";
-
-    if (collision("house")){
-        x=prevx
-        y=prevy
-
-        player.style.left=x+"px";
-        player.style.top=y+"px";
+    for(i of worldObjects){
+        if (collision(i)){
+            x=prevx
+            y=prevy
+    
+            player.style.left=x+"px";
+            player.style.top=y+"px";
+    
+        }
+        z(i)
 
     }
 
+
     requestAnimationFrame(update)
+
 }
 update()

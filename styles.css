@@ -24,7 +24,7 @@ body{
     left: 500px;
     transform: scale(0.5);
     position: absolute;
-    background-image: url("assests/character/leftwalking.gif");
+    background-image: url("assests/character/idle.png");
     height: 120px;
     width: 90px;
     background-size: cover;
@@ -38,9 +38,14 @@ body{
     height: 100px;
     width: 100px;
     transform: scale(1.5);
-    z-index: 0;
+   
     position: absolute;
     top: 0px;
     left:650px;
 
+}
+.house.b{
+    
+    top: 80px;
+    left: 800px;
 }
