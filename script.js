@@ -1,4 +1,4 @@
-worldObjects=["house","house-2"]
+worldObjects=["house","house-2","house-3"]
 player=document.getElementById("player");
 speed=2
 x=500
@@ -32,20 +32,18 @@ addEventListener("keyup",function(e){
 
 function z(objectId){
     pla=document.getElementById("player").getBoundingClientRect()
-    player=document.getElementById("player")
     obj=document.getElementById(objectId).getBoundingClientRect()
     ob=document.getElementById(objectId)
 
-    if(pla.bottom+90>obj.bottom){
-        // console.log(obj.bottom,"player:-",pla.bottom)
+    if(pla.bottom>obj.bottom){
+
      
-        ob.style.zIndex = 2; 
-        player.style.zIndex = 3
+        ob.style.zIndex = 0; 
        
 
     }else{
-        ob.style.zIndex = 3; 
-        player.style.zIndex = 2;
+        ob.style.zIndex = 2; 
+       
     }
 
 }
@@ -61,8 +59,8 @@ function collision(id1){
 
 
 
-    if(obj1.right>obj2.left+20&&
-        obj1.left<obj2.right-20&&
+    if(obj1.right>obj2.left+15&&
+        obj1.left<obj2.right-15&&
         obj1.top<obj2.top&&
         obj1.bottom>obj2.bottom
     ){
