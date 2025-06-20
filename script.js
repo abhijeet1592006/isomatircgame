@@ -2,8 +2,9 @@ hi=()=>{startWindow=document.getElementById("start").style.display="none"}
 
 
 
+loader=()=>{document.getElementById("loader").style.display="none"}
 
-
+setTimeout(loader,3000)
 
 worldObjects=["house","house-2","house-3","house-4","house-5","tree","tree-2"]
 player=document.getElementById("player");

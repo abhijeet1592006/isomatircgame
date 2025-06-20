@@ -12,6 +12,7 @@
 
 }
 .bar{
+    position: relative;
     place-content: center;
     align-items: center;
     text-align: center;
@@ -19,9 +20,30 @@
     font-family: "Pixelify Sans", sans-serif;
     height: 20px;
     width: 500px;
-    background-color: greenyellow;
     border: 3px solid white;
+    overflow: hidden;
     
+}
+@keyframes bar {
+    0%{
+        width: 0;
+
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+.bar::before{
+    position: absolute;
+    content: "";
+    background-color: greenyellow;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    padding: 4px;
+    animation: bar 3s 1 ease-in-out;
 }
 
 body{
