@@ -124,7 +124,7 @@ button{
 }
 
 .wall{
-    z-index: -5;
+    z-index: -9;
     height: 500px;
     width: 1000px;
     position: absolute;
@@ -157,14 +157,29 @@ button{
 
 
 }
+@keyframes cloud {
+    0%{
+
+        top: -475px;
+        left: 300px;
+
+    }
+    100%{
+        top: -140px;
+        left: 910px;
+    }
+    
+}
 .r-wall.b{
+    opacity: 0.8;
     z-index: -8;
-    background-image: url("assests/clouds/2.png");
-    top: -320px;
-    left: 600px;
-    height:500px;
-    width: 500px;
-    background-size: contain;
+    background-image: url("assests/clouds/3.png");
+
+    height:400px;
+    width: 576px;
+    background-size: cover;
+    animation: cloud 120s infinite forwards;
+    
 
 
 
