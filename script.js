@@ -122,3 +122,26 @@ function update(){
 }
 update()
 
+
+
+
+
+window.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+        e.preventDefault();
+        console.log("Zoom blocked via keyboard");
+    }
+});
+
+window.addEventListener("wheel", function(e) {
+
+    if (e.ctrlKey) {
+        e.preventDefault();
+        console.log("Zoom blocked via mouse wheel");
+    }
+}, { passive: false }); 
+
+
+window.onload=function(){
+    console.log("all images loaded......")
+}
