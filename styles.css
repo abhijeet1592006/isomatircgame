@@ -1,8 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.obj{
+    background-image: url("assests/character/downwalk.gif");
+    background-image: url("assests/character/upwalking.gif");
+    background-image: url("assests/character/rightwalk.gif");
+    background-image: url("assests/character/leftwalking.gif");
+
+    display: none;
+
+    
+    
+
+}
 
 .loader{
-    z-index: 99;
+    z-index: 98;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -12,6 +24,7 @@
 
 }
 .bar{
+
     position: relative;
     place-content: center;
     align-items: center;
@@ -35,6 +48,7 @@
     
 }
 .bar::before{
+    z-index: -1;
     position: absolute;
     content: "";
     background-color: greenyellow;
