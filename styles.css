@@ -6,7 +6,11 @@
     background-image: url("assests/character/rightwalk.gif");
     background-image: url("assests/character/leftwalking.gif");
 
-    display: none;
+    height: 1px;
+    width: 1px;
+    top: -10000px;
+    left: -10000px;
+    z-index: -9999
 
     
     
