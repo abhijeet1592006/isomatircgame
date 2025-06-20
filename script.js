@@ -142,6 +142,3 @@ window.addEventListener("wheel", function(e) {
 }, { passive: false }); 
 
 
-window.onload=function(){
-    console.log("all images loaded......")
-}
