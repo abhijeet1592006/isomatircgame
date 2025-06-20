@@ -97,7 +97,7 @@ body{
     background-image: url("assests/banner.jpg");
     background-size: cover;
     background-position:0px -100px;
-    
+    z-index: 999;
     background-repeat: no-repeat;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 1rem;
@@ -130,9 +130,42 @@ button{
     position: absolute;
     top: -67px;
     left: 00px;
-    background-color: rgb(202, 230, 220);
-    background-size: cover;
+    background-image: url("assests/clouds/1.png");
+    background-size: contain;
     background-position: center;
     transform-origin: 0% 23%;
     transform: rotate(-5deg)translate(-150px,20px) skew(2deg, -25deg);
+}
+.wall.b{
+    background-image: url("assests/clouds/2.png");
+    left: -289px;
+    top: 100px;
+}
+
+.r-wall{
+    z-index: -9;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: -200px;
+    left: 890px;
+    background-image: url("assests/clouds/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-31deg) skew(-22deg, 60deg);
+
+
+}
+.r-wall.b{
+    z-index: -8;
+    background-image: url("assests/clouds/2.png");
+    top: -320px;
+    left: 600px;
+    height:500px;
+    width: 500px;
+    background-size: contain;
+
+
+
 }
